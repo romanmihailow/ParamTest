@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class BonusServiceTest {
 
-
+    @ParameterizedTest
     @CsvFileSource(files="src/test/resources/bonus.csv")
     public void testRegisteredUnderLimit(int expected, int amount, boolean isRegistered) {
         BonusService service = new BonusService();
